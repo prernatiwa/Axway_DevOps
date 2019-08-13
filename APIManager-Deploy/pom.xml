@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.axway.api</groupId>
+  <artifactId>Intg-Group1-deploy</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Group1-deploy</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+
+	<build>
+		<plugins>
+			<plugin>
+                                <groupId>com.axway.apim</groupId>
+                                <artifactId>api-manager-promotion</artifactId>
+                                <version>1.1</version>
+                                <configuration>
+                                        <apiManagerEndpoint>${apiManager.url}</apiManagerEndpoint>
+                                        <username>${apiManager.username}</username>
+                                        <password>${apiManager.password}</password>
+					<apiPassword>${api.password}</apiPassword>
+                                        <apiPromotePath>/opt/Axway/APIM/apigateway/posix/bin/apimanager-promote</apiPromotePath>
+                                </configuration>
+                                <executions>
+                                        <execution>
+                                                <phase>install</phase>
+                                                <goals>
+                                                        <goal>deployAPI</goal>
+                                                </goals>
+                                        </execution>
+                                </executions>
+                        </plugin>
+
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://api-env:8081/artifactory/api-management-demo-repository</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.axway</groupId>
+	<artifactId>oms-apimanager</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.axway.apim</groupId>
+				<artifactId>api-manager-promotion</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<apiManagerEndpoint>https://api-env:8175</apiManagerEndpoint>
+					<username>apiadmin</username>
+					<password>changeme</password>
+					<apiPassword>changeme</apiPassword>
+					<apiPromotePath>/opt/Axway/APIM/apigateway/posix/bin/apimanager-promote</apiPromotePath>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>deployAPI</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

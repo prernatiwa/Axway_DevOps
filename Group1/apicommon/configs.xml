@@ -1,0 +1,207 @@
+<configuration activeAssembly='UPGRADED'>
+ <storeType name='CertStore'>
+  <branch>
+   <node>/[Certificates]name=Certificate Store</node>
+  </branch>
+  <branch>
+   <node>/[KeyPairs]name=Key Pairs</node>
+  </branch>
+  <branch>
+   <node>/[PGPKeyPairs]name=PGP Key Pairs</node>
+  </branch>
+ </storeType>
+ <storeType name='EnvSettingsStore'>
+  <branch>
+   <node>/[EnvironmentalizedEntities]name=Environmentalized Entities Metadata</node>
+  </branch>
+ </storeType>
+ <storeType name='ExtConnsStore'>
+  <branch>
+   <node>/</node>
+   <componentType name='CassandraSettings'/>
+   <componentType name='OESSecurityRuntimeLoadableModule'/>
+   <componentType name='SunAccessManagerSettings'/>
+  </branch>
+  <branch>
+   <node>/[AWSSettings]name=Amazon Web Services Settings</node>
+  </branch>
+  <branch>
+   <node>/[AlertManager]name=Default Alert Configuration</node>
+  </branch>
+  <branch>
+   <node>/[AuthProfilesGroup]name=Auth Profiles</node>
+  </branch>
+  <branch>
+   <node>/[AuthnRepositoryGroup]name=Authentication Repositories</node>
+  </branch>
+  <branch>
+   <node>/[CacheManager]name=Cache Manager</node>
+  </branch>
+  <branch>
+   <node>/[ConnectionSetGroup]name=Connection Sets</node>
+  </branch>
+  <branch>
+   <node>/[DbConnectionGroup]name=Database Connections</node>
+  </branch>
+  <branch>
+   <node>/[GSSAcceptors]name=GSS Acceptors</node>
+  </branch>
+  <branch>
+   <node>/[GSSInitiators]name=GSS Initiators</node>
+  </branch>
+  <branch>
+   <node>/[GSSMechanismOidGroup]name=GSS Mechanism OIDs</node>
+  </branch>
+  <branch>
+   <node>/[GSSPrincipalNameOidGroup]name=GSS Principal Name OIDs</node>
+  </branch>
+  <branch>
+   <node>/[GSSPrincipals]name=GSS Principals</node>
+  </branch>
+  <branch>
+   <node>/[ICAPServerGroup]name=ICAP Servers</node>
+  </branch>
+  <branch>
+   <node>/[JMSServiceGroup]name=JMS Services</node>
+  </branch>
+  <branch>
+   <node>/[LdapDirectoryGroup]name=LDAP Directories</node>
+  </branch>
+  <branch>
+   <node>/[NetService]</node>
+   <componentType name='KerberosConfiguration'/>
+   <componentType name='RemoteHost'/>
+   <componentType name='TivoliSettingsReference'/>
+  </branch>
+  <branch>
+   <node>/[OAuth2StoresGroup]name=OAuth2 Stores</node>
+  </branch>
+  <branch>
+   <node>/[ProxyServerGroup]name=Proxy Servers</node>
+  </branch>
+  <branch>
+   <node>/[RadiusClients]name=RADIUS Client Settings</node>
+  </branch>
+  <branch>
+   <node>/[RendezvousDaemonGroup]name=Rendezvous Daemon Connections</node>
+  </branch>
+  <branch>
+   <node>/[SMTPServerGroup]name=SMTP Servers</node>
+  </branch>
+  <branch>
+   <node>/[SentinelServerGroup]name=Sentinel Servers</node>
+  </branch>
+  <branch>
+   <node>/[SiteMinderConnectionSet]name=SiteMinder Connections</node>
+  </branch>
+  <branch>
+   <node>/[SyslogServerGroup]name=Syslog Servers</node>
+  </branch>
+  <branch>
+   <node>/[TivoliSettingsGroup]name=Tivoli Settings</node>
+  </branch>
+  <branch>
+   <node>/[UrlSetGroup]name=URL Sets</node>
+  </branch>
+  <branch>
+   <node>/[XkmsConfigGroup]name=XKMS Servers</node>
+  </branch>
+ </storeType>
+ <storeType name='ListenersStore'>
+  <branch>
+   <node>/[CORSGroup]name=CORS Profiles</node>
+  </branch>
+  <branch>
+   <node>/[NetService]</node>
+   <componentType name='CircuitScheduler'/>
+   <componentType name='DirectoryScanner'/>
+   <componentType name='FTPScanner'/>
+   <componentType name='FileTransfer'/>
+   <componentType name='Interface'/>
+   <componentType name='InterfaceInvariant'/>
+   <componentType name='JMSSession'/>
+   <componentType name='PopClient'/>
+   <componentType name='RendezvousListener'/>
+   <componentType name='SQSQueueListener'/>
+   <componentType name='SocketProtocol'/>
+  </branch>
+  <branch>
+   <node>/[WAFProfileGroup]name=Threat Protection Profiles</node>
+  </branch>
+ </storeType>
+ <storeType name='PrimaryStore'>
+  <branch>
+   <node>/</node>
+  </branch>
+ </storeType>
+ <storeType name='ResourceRepository'>
+  <branch>
+   <node>/[ResourceRepository]name=Resource Repository</node>
+  </branch>
+ </storeType>
+ <storeType name='UserStore'>
+  <branch>
+   <node>/[UserStore]name=Default User Store</node>
+  </branch>
+ </storeType>
+ <store id='CertStore-70b2238d-fd0c-4d0c-8d8e-0f47ca94b9c4' type='CertStore'>
+  <name>Upgraded CertStore Store</name>
+  <description>Store generated from upgrade task</description>
+  <connectionCredentials>
+   <credential name='url'>CertStore-70b2238d-fd0c-4d0c-8d8e-0f47ca94b9c4.xml</credential>
+  </connectionCredentials>
+ </store>
+ <store id='EnvSettingsStore-ee16479e-3488-4d7c-84b2-baed3535ce0c' type='EnvSettingsStore'>
+  <name>Upgraded EnvSettingsStore Store</name>
+  <description>Store generated from upgrade task</description>
+  <connectionCredentials>
+   <credential name='url'>EnvSettingsStore-ee16479e-3488-4d7c-84b2-baed3535ce0c.xml</credential>
+  </connectionCredentials>
+ </store>
+ <store id='ExtConnsStore-0ea2f64d-c332-44ca-b8e3-f9401941bd07' type='ExtConnsStore'>
+  <name>Upgraded ExtConnsStore Store</name>
+  <description>Store generated from upgrade task</description>
+  <connectionCredentials>
+   <credential name='url'>ExtConnsStore-0ea2f64d-c332-44ca-b8e3-f9401941bd07.xml</credential>
+  </connectionCredentials>
+ </store>
+ <store id='ListenersStore-5df28f86-3f5a-4701-ba17-18a569679eb1' type='ListenersStore'>
+  <name>Upgraded ListenersStore Store</name>
+  <description>Store generated from upgrade task</description>
+  <connectionCredentials>
+   <credential name='url'>ListenersStore-5df28f86-3f5a-4701-ba17-18a569679eb1.xml</credential>
+  </connectionCredentials>
+ </store>
+ <store id='PrimaryStore-89e536a2-346c-47c8-8981-5d447073a251' type='PrimaryStore'>
+  <name>Upgraded PrimaryStore Store</name>
+  <description>Store generated from upgrade task</description>
+  <connectionCredentials>
+   <credential name='url'>PrimaryStore-89e536a2-346c-47c8-8981-5d447073a251.xml</credential>
+  </connectionCredentials>
+ </store>
+ <store id='ResourceRepository-b93656cc-27bc-49e6-83cb-6009b8e9bb3d' type='ResourceRepository'>
+  <name>Upgraded ResourceRepository Store</name>
+  <description>Store generated from upgrade task</description>
+  <connectionCredentials>
+   <credential name='url'>ResourceRepository-b93656cc-27bc-49e6-83cb-6009b8e9bb3d.xml</credential>
+  </connectionCredentials>
+ </store>
+ <store id='UserStore-7bad08d4-bbba-4353-9b1b-811477aa0469' type='UserStore'>
+  <name>Upgraded UserStore Store</name>
+  <description>Store generated from upgrade task</description>
+  <connectionCredentials>
+   <credential name='url'>UserStore-7bad08d4-bbba-4353-9b1b-811477aa0469.xml</credential>
+  </connectionCredentials>
+ </store>
+ <assembly id='UPGRADED'>
+  <name>Upgraded Configuration</name>
+  <description>Upgraded Assembly, generated Wed May 15 07:24:50 MST 2019</description>
+  <component id='CertStore-70b2238d-fd0c-4d0c-8d8e-0f47ca94b9c4'/>
+  <component id='EnvSettingsStore-ee16479e-3488-4d7c-84b2-baed3535ce0c'/>
+  <component id='ExtConnsStore-0ea2f64d-c332-44ca-b8e3-f9401941bd07'/>
+  <component id='ListenersStore-5df28f86-3f5a-4701-ba17-18a569679eb1'/>
+  <component id='PrimaryStore-89e536a2-346c-47c8-8981-5d447073a251'/>
+  <component id='ResourceRepository-b93656cc-27bc-49e6-83cb-6009b8e9bb3d'/>
+  <component id='UserStore-7bad08d4-bbba-4353-9b1b-811477aa0469'/>
+ </assembly>
+</configuration>

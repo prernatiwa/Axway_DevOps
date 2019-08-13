@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.axway.api</groupId>
+    <artifactId>Group1</artifactId>
+    <version>1.0</version>
+  </parent>
+  <groupId>com.axway.api</groupId>
+  <artifactId>Group1-package</artifactId>
+  <version>1.0</version>
+  <name>Group1-package</name>
+  <url>http://maven.apache.org</url>
+  <packaging>pol</packaging>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<archive.name>Group1</archive.name>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.axway.api</groupId>
+      <artifactId>apicommon</artifactId>
+          <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.axway.api</groupId>
+      <artifactId>apiproject1</artifactId>
+	  <version>1.0</version>
+    </dependency>
+	<dependency>
+      <groupId>com.axway.api</groupId>
+      <artifactId>apiproject2</artifactId>
+	  <version>1.0</version>
+    </dependency>
+  </dependencies>
+  
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/alternateLocation</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>com.axway</groupId>
+				<artifactId>fed-archive</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>pol</id>
+						<phase>package</phase>
+						<goals>
+							<goal>pol</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<name>${archive.name}</name>
+					<targetPassphrase></targetPassphrase>
+					<targetPassphrase></targetPassphrase>
+					<projpackPath>/opt/Axway/APIM/apigateway/posix/bin/projpack</projpackPath>
+					<polFilePath></polFilePath>
+
+				</configuration>
+
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-artifacts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts>
+
+								<artifact>
+									<file>${project.basedir}/target/${archive.name}.env</file>
+									<type>env</type>
+									<classifier>intg</classifier>
+								</artifact>
+								
+								
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<!--plugin>
+				<groupId>org.jfrog.buildinfo</groupId>
+				<artifactId>artifactory-maven-plugin</artifactId>
+				<version>2.6.1</version>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>build-info</id>
+						<goals>
+							<goal>publish</goal>
+						</goals>
+						<configuration>
+							<deployProperties>
+								<gradle>awesome</gradle>
+								<review.team>qa</review.team>
+							</deployProperties>
+							<publisher>
+								<contextUrl>http://10.128.58.113:8081/artifactory</contextUrl>
+								<username>admin</username>
+								<password>password</password>
+								<repoKey>libs-release-local</repoKey>
+								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+							</publisher>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin-->
+
+
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>bintray</name>
+			<url>http://jcenter.bintray.com</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>bintray-plugins</name>
+			<url>http://jcenter.bintray.com</url>
+		</pluginRepository>
+	</pluginRepositories>
+</project>

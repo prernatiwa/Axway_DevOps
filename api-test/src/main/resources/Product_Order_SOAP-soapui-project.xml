@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="612390c4-e030-49c7-a3b0-003e8427eb0a" activeEnvironment="Default" name="Product Order SOAP" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="1c4777e4-4297-47ff-8e02-dc9a6ff39d70" wsaVersion="NONE" name="ProductOrderSOAP" type="wsdl" bindingName="{http://www.axway.com/ProductOrder/}ProductOrderSOAP" soapVersion="1_1" anonymous="optional" definition="http://10.129.58.17:5080/ProductOrder/V1.0?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.129.58.17:5080/ProductOrder/V1.0?wsdl"><con:part><con:url>http://10.129.58.17:5080/ProductOrder/V1.0?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ProductOrder" targetNamespace="http://www.axway.com/ProductOrder/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.axway.com/ProductOrder/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fault="http://www.axway.com/Fault">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified">
+      <xsd:import namespace="http://www.axway.com/ProductOrder/" schemaLocation="http://10.129.58.17:5080/ProductOrder/V1.0?WSDL&amp;fingerprint=VN4ZOUEF2GMKV6WIIPOUZ5VWZMPAMB6S.xsd"/>
+      <xsd:import namespace="http://www.axway.com/Fault" schemaLocation="http://10.129.58.17:5080/ProductOrder/V1.0?WSDL&amp;fingerprint=LE52F7HFSDDUWN3D5AED3AFXHHZWGN4U.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SubmitOrderRequest">
+    <wsdl:part element="tns:SubmitOrderRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SubmitOrderResponse">
+    <wsdl:part element="tns:SubmitOrderResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetOpenOrdersRequest">
+    <wsdl:part element="tns:GetOpenOrdersRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetOpenOrdersResponse">
+    <wsdl:part element="tns:GetOpenOrdersResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetMostRecentOrderRequest">
+    <wsdl:part element="tns:GetMostRecentOrderRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetMostRecentOrderResponse">
+    <wsdl:part element="tns:GetMostRecentOrderResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetOrderRequest">
+    <wsdl:part element="tns:GetOrderRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetOrderResponse">
+    <wsdl:part element="tns:GetOrderResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CancelOrderRequest">
+    <wsdl:part element="tns:CancelOrderRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CancelOrderResponse">
+    <wsdl:part element="tns:CancelOrderResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="Fault">
+    <wsdl:part name="parameter" element="fault:Fault"/>
+  </wsdl:message>
+  <wsdl:portType name="ProductOrder">
+    <wsdl:operation name="SubmitOrder">
+      <wsdl:input message="tns:SubmitOrderRequest"/>
+      <wsdl:output message="tns:SubmitOrderResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenOrders">
+      <wsdl:input message="tns:GetOpenOrdersRequest"/>
+      <wsdl:output message="tns:GetOpenOrdersResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostRecentOrder">
+      <wsdl:input message="tns:GetMostRecentOrderRequest"/>
+      <wsdl:output message="tns:GetMostRecentOrderResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <wsdl:input message="tns:GetOrderRequest"/>
+      <wsdl:output message="tns:GetOrderResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:input message="tns:CancelOrderRequest"/>
+      <wsdl:output message="tns:CancelOrderResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProductOrderSOAP" type="tns:ProductOrder">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SubmitOrder">
+      <soap:operation soapAction="http://www.axway.com/ProductOrder/SubmitOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenOrders">
+      <soap:operation soapAction="http://www.axway.com/ProductOrder/GetOpenOrders"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostRecentOrder">
+      <soap:operation soapAction="http://www.axway.com/ProductOrder/GetMostRecentOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <soap:operation soapAction="http://www.axway.com/ProductOrder/GetOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="http://www.axway.com/ProductOrder/CancelOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductOrder">
+    <wsdl:port binding="tns:ProductOrderSOAP" name="ProductOrderSOAP">
+      <soap:address location="http://10.129.58.17:5080/ProductOrder/V1.0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://10.129.58.17:5080/ProductOrder/V1.0?WSDL&amp;fingerprint=VN4ZOUEF2GMKV6WIIPOUZ5VWZMPAMB6S.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.axway.com/ProductOrder/" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:po="http://www.axway.com/ProductOrder/" xmlns:Q1="http://www.axway.com/Fault">
+  <xs:element name="SubmitOrderRequest" type="po:SubmitOrderRequest"/>
+  <xs:complexType name="SubmitOrderRequest">
+    <xs:sequence>
+      <xs:element name="SubmitOrderDetails" type="po:SubmitOrderDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SubmitOrderDetails">
+    <xs:sequence>
+      <xs:element name="CustomerId" type="po:CustomerId"/>
+      <xs:element name="Address" type="po:SimpleAddress"/>
+      <xs:element name="ItemDetails" type="po:ItemDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubmitOrderResponse" type="po:SubmitOrderResponse"/>
+  <xs:complexType name="SubmitOrderResponse">
+    <xs:sequence>
+      <xs:element name="OrderId" type="po:OrderId"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOpenOrdersRequest" type="po:GetOpenOrdersRequest"/>
+  <xs:complexType name="GetOpenOrdersRequest">
+    <xs:sequence>
+      <xs:element name="CustomerId" type="po:CustomerId"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOpenOrdersResponse" type="po:GetOpenOrdersResponse"/>
+  <xs:complexType name="GetOpenOrdersResponse">
+    <xs:sequence>
+      <xs:element name="Orders" type="po:OrderIds"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMostRecentOrderRequest" type="po:GetMostRecentOrderRequest"/>
+  <xs:complexType name="GetMostRecentOrderRequest">
+    <xs:sequence>
+      <xs:element name="CustomerId" type="po:CustomerId"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMostRecentOrderResponse" type="po:GetMostRecentOrderResponse"/>
+  <xs:complexType name="GetMostRecentOrderResponse">
+    <xs:sequence>
+      <xs:element name="CustomerId" type="po:CustomerId"/>
+      <xs:element name="OrderDetails" type="po:OrderDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOrderRequest" type="po:GetOrderRequest"/>
+  <xs:complexType name="GetOrderRequest">
+    <xs:sequence>
+      <xs:element name="OrderId" type="po:OrderId"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOrderResponse" type="po:GetOrderResponse"/>
+  <xs:complexType name="GetOrderResponse">
+    <xs:sequence>
+      <xs:element name="OrderId" type="po:OrderId"/>
+      <xs:element name="CustomerId" type="po:CustomerId"/>
+      <xs:element name="Address" type="po:SimpleAddress"/>
+      <xs:element name="ItemDetails" type="po:ItemDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelOrderRequest" type="po:CancelOrderRequest"/>
+  <xs:complexType name="CancelOrderRequest">
+    <xs:sequence>
+      <xs:element name="OrderId" type="po:OrderId"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelOrderResponse" type="po:CancelOrderResponse"/>
+  <xs:complexType name="CancelOrderResponse">
+    <xs:sequence>
+      <xs:element name="OrderId" type="po:OrderId"/>
+      <xs:element name="ConfirmationNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="OrderId">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="15"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CustomerId">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="15"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="StreetAddressLine">
+    <xs:sequence>
+      <xs:element name="LineText">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="240"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SimpleAddress" type="po:SimpleAddress"/>
+  <xs:complexType name="SimpleAddress">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="StreetAddressLine" type="po:StreetAddressLine"/>
+      <xs:element minOccurs="0" name="City">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="PostalCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="State">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CountryCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="count" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element name="OrderId" type="po:OrderId"/>
+      <xs:element name="Address" type="po:SimpleAddress"/>
+      <xs:element name="ItemDetails" type="po:ItemDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrderIds">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="OrderId" type="po:OrderId"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrderDetails">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Order" type="po:Order"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemDetails">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Item" type="po:Item"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://10.129.58.17:5080/ProductOrder/V1.0?WSDL&amp;fingerprint=LE52F7HFSDDUWN3D5AED3AFXHHZWGN4U.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.axway.com/Fault" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fault="http://www.axway.com/Fault">
+  <xs:element name="Fault" type="fault:Fault"/>
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="errorDescription" type="xs:string"/>
+      <xs:element name="errorCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://ITEM-A25399:8088/mockProductOrderSOAP</con:endpoint><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint></con:endpoints><con:operation id="3c998693-d1b9-4da9-ab0a-83a82fc3ff4e" isOneWay="false" action="http://www.axway.com/ProductOrder/CancelOrder" name="CancelOrder" bindingOperationName="CancelOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2bf591d0-7526-4f85-bd67-5e8ef0411cf9" name="Success"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:CancelOrderRequest>\r
+         <OrderId>342134</OrderId>\r
+      </prod:CancelOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/CancelOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call id="826b5565-cd97-43c0-9574-0a82dfb49d77" name="Failure"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:CancelOrderRequest>\r
+         <OrderId>21212</OrderId>\r
+      </prod:CancelOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/CancelOrder"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ec8819f2-cf30-4813-9a3a-e5aa5ce80c8a" isOneWay="false" action="http://www.axway.com/ProductOrder/GetMostRecentOrder" name="GetMostRecentOrder" bindingOperationName="GetMostRecentOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4eb41f03-c5de-40d4-885d-54ba62ca8eb4" name="Success"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetMostRecentOrderRequest>\r
+         <CustomerId>AA123456</CustomerId>\r
+      </prod:GetMostRecentOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/GetMostRecentOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call id="55faaa95-4e90-4245-803c-ed35959ca6e3" name="Failure"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetMostRecentOrderRequest>\r
+         <CustomerId>	</CustomerId>\r
+      </prod:GetMostRecentOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/GetMostRecentOrder"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9eba8c44-b0cb-462e-9467-0e31ff348a99" isOneWay="false" action="http://www.axway.com/ProductOrder/GetOpenOrders" name="GetOpenOrders" bindingOperationName="GetOpenOrders" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="51b9fb95-c235-4f6f-9fc8-b178dcd3ecac" name="Success"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetOpenOrdersRequest>\r
+         <CustomerId>BB12345</CustomerId>\r
+      </prod:GetOpenOrdersRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/GetOpenOrders"/><con:wsrmConfig version="1.2"/></con:call><con:call id="7579064a-b9b4-4c68-ba91-337a81567b83" name="Failure"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetOpenOrdersRequest>\r
+         <CustomerId>BB11212</CustomerId>\r
+      </prod:GetOpenOrdersRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/GetOpenOrders"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a5abc23f-6dc3-4a1e-9c17-93cc32d1fdd1" isOneWay="false" action="http://www.axway.com/ProductOrder/GetOrder" name="GetOrder" bindingOperationName="GetOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="be567f47-1fc9-4680-8f94-0af069dea8af" name="Success"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetOrderRequest>\r
+         <OrderId>123456</OrderId>\r
+      </prod:GetOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/GetOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call id="0eb7d854-d7ea-44d2-af55-c4d518ac3a57" name="Failure"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetOrderRequest>\r
+         <OrderId>21212</OrderId>\r
+      </prod:GetOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/GetOrder"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c0194fa8-255c-4d05-a8af-d4698649941c" isOneWay="false" action="http://www.axway.com/ProductOrder/SubmitOrder" name="SubmitOrder" bindingOperationName="SubmitOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5205a67f-21ee-4dc3-8e5a-02da75be8d7d" name="Success"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:SubmitOrderRequest>\r
+         <SubmitOrderDetails>\r
+            <CustomerId>AA12876</CustomerId>\r
+            <Address>\r
+               <!--Zero or more repetitions:-->\r
+               <StreetAddressLine>\r
+                  <LineText>3200 SW Pebble St</LineText>\r
+               </StreetAddressLine>\r
+               <StreetAddressLine>\r
+                  <LineText>APT 13</LineText>\r
+               </StreetAddressLine>\r
+               <City>Bentonville</City>\r
+               <PostalCode>72172</PostalCode>\r
+               <State>AR</State>\r
+               <CountryCode>US</CountryCode>\r
+            </Address>\r
+            <ItemDetails>\r
+               <!--1 or more repetitions:-->\r
+               <Item>\r
+                  <name>Iphone</name>\r
+                  <description>Apple IPhone 7</description>\r
+                  <count>1</count>\r
+               </Item>\r
+               <Item>\r
+                  <name>Iphone Battery Case</name>\r
+                  <description>Iphone Battery Case for Apple iphone 7</description>\r
+                  <count>1</count>\r
+               </Item>\r
+            </ItemDetails>\r
+         </SubmitOrderDetails>\r
+      </prod:SubmitOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/SubmitOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5cfe7d51-4624-4905-94ba-63c35a588f79" name="Failure"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prod:SubmitOrderRequest>
+         <SubmitOrderDetails>
+            <CustomerId>AA12876</CustomerId>
+            <Address>
+               <!--Zero or more repetitions:-->
+               <StreetAddressLine>
+                  <LineText>3200 SW Pebble St</LineText>
+               </StreetAddressLine>
+               <StreetAddressLine>
+                  <LineText>APT 13</LineText>
+               </StreetAddressLine>
+               <City>Bentonville</City>
+               <PostalCode>72172</PostalCode>
+               <State>AR</State>
+               <CountryCode>US</CountryCode>
+            </Address>
+            <ItemDetails>
+               <!--1 or more repetitions:-->
+               <Item>
+                  <name>Samsung</name>
+                  <description>Apple IPhone 7</description>
+                  <count>1</count>
+               </Item>
+               <Item>
+                  <name>Iphone Battery Case</name>
+                  <description>Iphone Battery Case for Apple iphone 7</description>
+                  <count>1</count>
+               </Item>
+            </ItemDetails>
+         </SubmitOrderDetails>
+      </prod:SubmitOrderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.axway.com/ProductOrder/SubmitOrder"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="8ea0b922-8c16-494a-8899-88c127e51077" name="ProductOrderTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="63eed2ec-1a61-4afc-9f3e-e5d21bb8179e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get Order" searchProperties="true"><con:settings/><con:testStep type="request" name="Get Order" id="e70c44bb-c89e-46c1-89bc-a64dc55521cb"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProductOrderSOAP</con:interface><con:operation>GetOrder</con:operation><con:request name="Get Order" id="00b0dc1f-6b5f-4365-9315-4645d603985c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetOrderRequest>\r
+         <OrderId>123</OrderId>\r
+      </prod:GetOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="161747cd-9029-4117-86d6-8d59704e7dc8"/><con:assertion type="Schema Compliance" id="2a7857fe-73a2-42b5-9830-715fd4cc33d9"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6c996760-e1c4-4b3a-bd98-5d6f41fcfb34" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Cancel Order" searchProperties="true"><con:settings/><con:testStep type="request" name="Cancel Order" id="fa22938e-3653-4473-b089-d974e9fa40c1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProductOrderSOAP</con:interface><con:operation>CancelOrder</con:operation><con:request name="Cancel Order" id="4a315daf-8058-48e8-9003-e886eb795914"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5080/ProductOrder/V1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.axway.com/ProductOrder/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:CancelOrderRequest>\r
+         <OrderId>1234</OrderId>\r
+      </prod:CancelOrderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bf19fd02-176a-48fa-b315-07dff169dc5c"/><con:assertion type="Schema Compliance" id="5f1e05ce-236e-49e7-bf71-1dc8f67dbae4"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.axway.api</groupId>
+  <artifactId>Prod-Group1-Deploy</artifactId>
+  <version>${build_version}</version>
+  <packaging>jar</packaging>
+
+  <name>Prod-Group1-deploy</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+
+		<dependency>
+			<groupId>com.axway.api</groupId>
+			<artifactId>Group1-package</artifactId>
+			<version>${build_version}</version>
+			<type>pol</type>
+		</dependency>
+		<dependency>
+			<groupId>com.axway.api</groupId>
+			<artifactId>Group1-package</artifactId>
+			<version>${build_version}</version>
+			<classifier>qa</classifier>
+			<type>env</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/alternateLocation</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.axway</groupId>
+				<artifactId>apigateway-deploy</artifactId>
+				<configuration>
+					<projdeployPath>/opt/Axway/APIM/apigateway/posix/bin/projdeploy</projdeployPath>
+					<host>localhost</host>
+					<port>8090</port>
+					<groupName>int</groupName>
+					<instanceName>gateway1</instanceName>
+					<username>admin</username>
+					<password>changeme</password>
+					<type>pol</type>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>deployFed</goal>
+						</goals>
+
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://10.128.58.113:8081/artifactory/libs-release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>http://10.128.58.113:8081/artifactory/libs-snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+</project>

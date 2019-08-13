@@ -1,0 +1,27 @@
+# ProductName=projupgrade 7.7.0-2019-04-12 rev. 59de774 (Linux.x86_64)
+# CurrentDate=Mon, 20 May 2019 00:36:33 -0700
+# CurrentDateUTC=1558337793
+# TZ=MST
+
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000] Tracing to directory: /opt/DevOps/ini/DevOps/APIManager/projupgrade_logs_2019-05-20_00-36-33 filename: projupgrade.report
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000] ===================
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000] Running projupgrade
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000] ===================
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000] Projects directory : /opt/DevOps/ini/DevOps/APIManager
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000] Backup directory   : None
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000] Logging directory  : /opt/DevOps/ini/DevOps/APIManager/projupgrade_logs_2019-05-20_00-36-33
+REPORT  20/May/2019:00:36:33.153 [4fd2:000000000000000000000000]  
+REPORT  20/May/2019:00:36:33.154 [4fd2:000000000000000000000000]  
+REPORT  20/May/2019:00:36:33.241 [4fd2:000000000000000000000000] Upgrading project 'ZDD IntGroup': /opt/DevOps/ini/DevOps/APIManager ...
+REPORT  20/May/2019:00:36:33.259 [4fd2:000000000000000000000000]     Upgrading 'federated:file:////opt/DevOps/ini/DevOps/APIManager/configs.xml' and putting output into '/tmp/tmpSyJIUR'...
+REPORT  20/May/2019:00:36:34.817 [4fd2:000000000000000000000000]     Writing upgrade to 'federated:file:/tmp/tmpSyJIUR/configs.xml', please wait...
+REPORT  20/May/2019:00:36:40.738 [4fd2:000000000000000000000000]     Migrating Certificate from version 5 to version 6
+REPORT  20/May/2019:00:36:40.738 [4fd2:000000000000000000000000]     Adding 'conversation' (string field)
+REPORT  20/May/2019:00:36:42.235 [4fd2:000000000000000000000000]     Adding 'passwordSetOn' property to PortalIdentityStore
+REPORT  20/May/2019:00:37:00.783 [4fd2:000000000000000000000000]     ... Upgrade successful.
+REPORT  20/May/2019:00:37:01.127 [4fd2:000000000000000000000000]     OK
+REPORT  20/May/2019:00:37:01.129 [4fd2:000000000000000000000000]  
+REPORT  20/May/2019:00:37:01.129 [4fd2:000000000000000000000000] projupgrade summary
+REPORT  20/May/2019:00:37:01.129 [4fd2:000000000000000000000000] ===================
+REPORT  20/May/2019:00:37:01.129 [4fd2:000000000000000000000000] Number of projects successfully upgraded: 1
+REPORT  20/May/2019:00:37:01.129 [4fd2:000000000000000000000000] Number of projects where upgrade failed: 0
